@@ -2,22 +2,43 @@
     <head>
         <title>miracle</title>
         <style type="text/css">
-            h1 {color:red;}
-            p {color:green;}
+        div#container{width:500px;}
+        div#header{backgroud-color:#99bbbb;}
+        div#menu{backgroud-color:#ffff99;height:200px;width:150px;float:left;}
+        div#content{backgroud-color:#EEEEEE;height:200px;width:350px;float:left;}
+        div#footer{backgroud-color:#99bbbb;clear:both;text-align:center;}
+        h1{margin-bottom:0;}
+        h2{margin-bottom:0;font-size:18px;}
+        ul{margin:0;}
+        li{list-style:none;}
         </style>
     </head>
     <body>
-    <h1><a href="/example/new.html#tips">春晓</a></h1>
-    <p>春眠不觉晓，
-    <br/>处处闻啼鸟。
-    <br/>夜来风雨声，
-    <br/>花落知多少。</p>
-    <i>Welcome to my first blog!</i>
-    <p>
+    <div id="container">
+    
+    <div id="header">
+        <h1>唐诗三百首</h1>
+    </div>
+    
+    <div id="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="/example/spring.html">春晓</a></li>
+            <li><a href="/example/night.html">静夜思</a></li>
+        </ul>
+    </div>
+    
+    <div id="content">
+        <i>Welcome to my first blog!</i>
+    </div>
+
+    <div id="footter">
+        written by <a href="mailto:guocuo123@qq.com">David Guo</a>
+    </div>
+    <!--p>
     <img src="/print.png" width="128" height="128"/>
-    </p>
+    </p-->
     <address style="color: red;">
-      written by <a href="mailto:guocuo123@qq.com">David Guo</a>.<br/>
       Visit me at http://snakepass.github.io<br/>
       China
     </address> 
