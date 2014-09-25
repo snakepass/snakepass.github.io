@@ -17,14 +17,7 @@
     function myFunction()
     {
         x=document.getElementById("header")
-        if(x.style.color=="#ff0000")
-        {
-            x.style.color="#000000";
-        }
-        else
-        {
-            x.style.color="#ff0000";
-        }
+        x.style.color="#ff0000";
     }
     </script>
     <body>
@@ -49,6 +42,18 @@
         <i>处处闻啼鸟</i></br>
         <i>夜来风雨声</i></br>
         <i>花落知多少</i></br>
+        <p>请输入数字，否则浏览器会报错</p>
+        <input id="demo" type="text">
+        <script>
+        function NumFunction()
+        {
+            var x=document.getElementById("demo").value
+            if(x==""||isNaN(x))
+            {
+                alert("Not Numeric");
+            }
+        }
+        </script>
     </div>
 
     <div id="footter">
