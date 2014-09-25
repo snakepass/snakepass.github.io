@@ -17,7 +17,14 @@
     function myFunction()
     {
         x=document.getElementById("header")
-        x.style.color="#ff0000";
+        if(x.style.color.match("#ff0000"))
+        {
+            x.style.color="#000000";
+        }
+        else
+        {
+            x.style.color="#ff0000";
+        }
     }
     </script>
     <body>
