@@ -8,27 +8,32 @@
         .centerDiv{margin-left:50%;}
         .imgDiv{margin-left:20%;}
         </style>
-        <script language=javascript>
-        var strength=0;
-        function flash()
-        {   
-            window.document.all("flashing").style.filter="Glow(color=#ffff00,strength="+strength+")";
-            strength+=4;
-            if(strength>20) strength=0;
-                setTimeout("flash()",200);
-        }
-        </script> 
     </head>
-    <body onload="flash()">
+    <body>
 
-    <div id=flashing class="centerDiv">
+    <div class="centerDiv">
     <h1>春晓</h1>
     <p>春眠不觉晓，
     <br/>处处闻啼鸟。
     <br/>夜来风雨声，
     <br/>花落知多少。</p>
 
+    <script>
+    function mOver(obj)
+    {
+        obj.innerHTML="Merry Christmas"
+    }
+
+    function mOut(obj)
+    {
+        obj.innerHTML="把鼠标移到上面"
+    }
+    </script>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;">把鼠标移到上面</div>
+
+    <!--
     <i>Welcome to my first blog!</i>
+    --!>
     </div>
     <div class="imgDiv">
     <p>
@@ -43,6 +48,6 @@
     </div>
     <CENTER>
     <DIV id=flashing 
-    style="COLOR: #ff0000; FONT-FAMILY: 黑体; HEIGHT: 35px; WIDTH: 206px">欢迎光临素材天下网!</DIV></CENTER>
+    style="COLOR: #ff0000; FONT-FAMILY: 黑体; HEIGHT: 35px; WIDTH: 206px">欢迎光临!</DIV></CENTER>
     </body>
 </html>
