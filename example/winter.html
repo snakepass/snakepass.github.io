@@ -1,0 +1,61 @@
+<html>
+<title>荧光效果不断闪动的文字丨芯晴网页特效丨CsrCode.Cn</title>
+<body>
+<span id="theText" style="width:100%">
+<h1>欢迎光临芯晴网页特效</h1>
+</span> 
+<script>
+<!--
+var from = 1;
+var to = 4;
+var delay = 55; //闪的速度
+var glowColor = "lime";//颜色
+var i = to;
+var j = 0;
+textPulseDown();
+
+function textPulseUp()
+{
+if (!document.all)
+return
+if (i < to)
+{
+theText.style.filter = "Glow(Color=" + glowColor + ", Strength=" + i + ")";
+i++;
+theTimeout = setTimeout('textPulseUp()',delay);
+return 0;
+}
+
+if (i = to)
+{
+theTimeout = setTimeout('textPulseDown()',delay);
+return 0;
+}
+
+
+}
+
+function textPulseDown()
+{
+if (!document.all)
+return
+if (i > from)
+{
+theText.style.filter = "Glow(Color=" + glowColor + ", Strength=" + i + ")";
+i--;
+theTimeout = setTimeout('textPulseDown()',delay);
+return 0;
+}
+
+if (i = from)
+{
+theTimeout = setTimeout('textPulseUp()',delay);
+return 0;
+}
+}
+
+//-->
+</script>
+</body>
+</html>
+
