@@ -10,38 +10,70 @@
         </style>
     </head>
     <body>
-    <FORM action="" method=post>
-    <DL>
-    <DD align="center">
-    <DIV align=center>
-    <CENTER>
-    <P><TEXTAREA class=pt9 cols=40 id=flashit name=textfield rows=8>闪烁的东西往往会吸引别人的注意。
-    你可以用它来强调一些比较重要的内容。</TEXTAREA> <BR><INPUT class=pt9 id=flashit name=textfield2 
-    size=40 value=文本框也可以的> <BR><INPUT id=flashit name=Submit type=submit value=Submit> <INPUT name=Submit2
-    type=reset value=Reset> </P></CENTER></DIV></DD></DL></FORM>
-    <P align=center>　</P>
-    <SCRIPT language=JavaScript1.2>
-    <!--//
-    if (document.all&&document.all.flashit){
-    var flashelement=document.all.flashit
-    if (flashelement.length==null)
-    flashelement[0]=document.all.flashit
-    function changecolor(which){
-    if (flashelement[which].style.color=='')
-    flashelement[which].style.color="red"
-    else
-    flashelement[which].style.color=""
+    <span id="theText" style="width:100%">
+    <h2>JavaScript Fairyland</h2>
+    </span>
+
+    <script>
+    <!--
+    //range of glowing
+    var from = 5;
+    var to = 11;
+
+    //speed of pulsing
+    var delay = 55;
+
+    //color of glow, name or RGB value (example:'#00FF00')
+    var glowColor = "lime";
+
+
+    //NO MORE EDITING!!!
+    var i = to;
+    var j = 0;
+
+    //can be called here or whenever you want the text to start pulsing
+    textPulseDown();
+
+    function textPulseUp()
+    {
+    if (!document.all)
+    return
+    if (i < to)
+    {
+    theText.style.filter = "Glow(Color=" + glowColor + ", Strength=" + i + ")";
+    i++;
+    theTimeout = setTimeout('textPulseUp()',delay);
+    return 0;
     }
-    if (flashelement.length==null)
-    setInterval("changecolor(0)",1000)
-    else
-    for (i=0;i<flashelement.length;i++){
-    var tempvariable='setInterval("changecolor('+i+')",'+'1000)'
-    eval(tempvariable)
+
+    if (i = to)
+    {
+    theTimeout = setTimeout('textPulseDown()',delay);
+    return 0;
     }
     }
+
+    function textPulseDown()
+    {
+    if (!document.all)
+    return
+    if (i > from)
+    {
+    theText.style.filter = "Glow(Color=" + glowColor + ", Strength=" + i + ")";
+    i--;
+    theTimeout = setTimeout('textPulseDown()',delay);
+    return 0;
+    }
+
+    if (i = from)
+    {
+    theTimeout = setTimeout('textPulseUp()',delay);
+    return 0;
+    }
+    }
+
     //-->
-    </SCRIPT> 
+    </script>
     <div class="centerDiv">
     <h1>春晓</h1>
     <p>春眠不觉晓，
