@@ -8,79 +8,29 @@
         .centerDiv{margin-left:50%;}
         .imgDiv{margin-left:20%;}
         </style>
+        <script language=javascript>
+        var strength=0;
+        function flash()
+        {   
+            window.document.all("flashing").style.filter="Glow(color=#ffff00,strength="+strength+")";
+            strength+=4;
+            if(strength>20) strength=0;
+                setTimeout("flash()",200);
+        }
+        </script> 
     </head>
     <body>
-    <span id="theText" style="width:100%">
-    <h2>JavaScript Fairyland</h2>
-    </span>
 
-    <script>
-    <!--
-    //range of glowing
-    var from = 5;
-    var to = 11;
-
-    //speed of pulsing
-    var delay = 55;
-
-    //color of glow, name or RGB value (example:'#00FF00')
-    var glowColor = "#00FF00";
-
-
-    //NO MORE EDITING!!!
-    var i = to;
-    var j = 0;
-
-    //can be called here or whenever you want the text to start pulsing
-    textPulseDown();
-    //textPulseUp();
-
-    function textPulseUp()
-    {
-    if (!document.all)
-    return
-    if (i < to)
-    {
-    theText.style.filter = "Glow(Color=" + glowColor + ", Strength=" + i + ")";
-    i++;
-    theTimeout = setTimeout('textPulseUp()',delay);
-    return 0;
-    }
-
-    if (i = to)
-    {
-    theTimeout = setTimeout('textPulseDown()',delay);
-    return 0;
-    }
-    }
-
-    function textPulseDown()
-    {
-    if (!document.all)
-    return
-    if (i > from)
-    {
-    theText.style.filter = "Glow(Color=" + glowColor + ", Strength=" + i + ")";
-    i--;
-    theTimeout = setTimeout('textPulseDown()',delay);
-    return 0;
-    }
-
-    if (i = from)
-    {
-    theTimeout = setTimeout('textPulseUp()',delay);
-    return 0;
-    }
-    }
-
-    //-->
-    </script>
     <div class="centerDiv">
-    <h1 onload="textPulseDown">春晓</h1>
+    <h1 onload=flash()>春晓</h1>
     <p>春眠不觉晓，
     <br/>处处闻啼鸟。
     <br/>夜来风雨声，
     <br/>花落知多少。</p>
+    <CENTER>
+    <DIV id=flashing 
+    style="COLOR: #ff0000; FONT-FAMILY: 黑体; HEIGHT: 35px; WIDTH: 206px">欢迎光临素材天下网!</DIV></CENTER>
+
     <i>Welcome to my first blog!</i>
     </div>
     <div class="imgDiv">
